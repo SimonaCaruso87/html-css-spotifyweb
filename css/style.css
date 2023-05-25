@@ -18,6 +18,24 @@
      max-width: 100%;
  }
 
+/************************************************
+     CUSTOM PROPERTIES
+  ************************************************/
+ 
+ /* COLOR BACKGROUND*/
+
+  :root{
+
+    --first-color:#141922;
+    --second-color:#282828;
+
+ /* COLOR TEXT */ 
+    --first-text:#4A4E54;
+    --second-text:white;
+    --third-text:#6A6A6A;
+   }
+
+
  /************************************************
      UTILITIES
   ************************************************/
@@ -52,32 +70,158 @@
     background-color: rgba(0,0,0,0.1);
     border-radius: 1.875rem;
     border-color:white;
-    color: white;
+    color: var(--second-text);
     width: 14.00rem;
     height: 2.5rem;
     font-size: .625rem;
    }
 
    #contenuto-con-lo-scroll-dx{
-
-    
+        
+    height: 100vw;
+    background-color: var(--first-color);
+    text-decoration: none;
 
    }
+
+   
 /*    MAIN   */   
 
 #main{
-   width:100vh;
-   height: 100v;
+    background-color: black;
+    width: 15.625rem;
+    height: 100vh;
+    position: fixed;
+    top:0;
+    left: 0;
 
+}
+
+.main-top{
+    position: relative;
+}
+
+
+#contenuto .menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+}
+
+#contenuto a{
+    text-decoration: none;
+    padding: 0px 20px;
+    color:var(--first-text);
+    font-size: .75rem;
+}
+
+#contenuto a:hover{
+    text-decoration: underline;
+    transform: transition;
+    text-decoration-color: yellow;
+    text-size-adjust: .3125rem;
+}
+
+  #contenuto a{
+    transition: all .35s ease;
+  }
+
+  div.logo-sx{
+    margin: 1.25rem;
+    font-size: .625rem;
+  }
+
+  .logo-main-fontawesone{
+    color:var(--second-text);
+    padding: .625rem;
+}
+
+span i{
+    padding-right:10px;
+}
+
+.navbar-logo a{
+    text-decoration: none;
+    list-style-type: none;
+    color:var(--third-text);
+    margin: 1.25rem;
+
+}
+
+.navbar-logo i{
+    margin: .3125rem;
+    color:var(--third-text)
+}
+
+.navbar-logo span:not(.plus-button-text){
+    font-size: .75rem;
+    font-weight: bold;
+
+}
+
+.playlist{
+    font-size: .8125rem;
+    color: var(--second-text);
+    margin:1.25rem 0rem 1.5625rem 1.5625rem;
+ }   
+
+ .plus-button{
+    width: 1.875rem;
+    height: 1.875rem;
+    line-height: 1.875rem;
+    vertical-align: middle;
+    background-color:var(--third-text);
+    font-size: 1.875rem;
+    text-align: center;
+ }
+.container-plus{
+    display: flex;
+
+}
+ div.plus-button{
+    margin-left: 1.5625rem;
+ }
+
+ .plus-button-text{
+    color:var(--third-text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: .625rem;
+    font-size: .9375rem;
+    font-weight: bold;
+}
+
+div h5{
+    color:var(--third-text);
+    margin: 1.5625rem;
 }
 
 
 /*    PLAYER STICKY   */
 
 #player-sticky{
-    height: 6.25rem;
+    background-color: var(--second-color);
+    height: 5rem;
+    position: sticky;
+    bottom: 0;
+}
+.container-main-bottom{
+    display: flex;
+    margin-top: 9.375rem;
+    margin-left: 1.5625rem;
 }
 
+.main-flexend{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.container-main-bottom div{
+    margin-top: .625rem;
+}
 /* LESSONS SECTION */
 
 
