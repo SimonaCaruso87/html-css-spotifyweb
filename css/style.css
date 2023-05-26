@@ -42,9 +42,9 @@
  
  /* LAYOUT */
 
- #container {
-     max-width: 1200px;
-     margin: 0 auto;
+ .my-container{
+    max-width: 1200px;
+    margin: 0 auto;
  }
  
 
@@ -82,47 +82,74 @@
     background-color: var(--first-color);
     text-decoration: none;
     overflow-y: auto;
-    width: calc(100% - 200px);
+    width: calc((100% - 15.625rem) - 0.3px);
     margin-left: auto;
 
    }
 
-   #container .menu{
+   .my-container .menu{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     list-style-type: none;
 }
 
-    #container a{
+    .my-container a{
     text-decoration: none;
     padding: 0px 20px;
     color:var(--first-text);
-    font-size: .75rem;
+    font-size: .625rem;
 }
 
-    #container a:hover{
+    .my-container a:hover{
     text-decoration: underline;
     transform: transition;
     text-decoration-color: yellow;
     text-size-adjust: .3125rem;
 }
 
-    #container a{
+    .my-container a{
     transition: all .35s ease;
   }
 
+/*    HEADER NAV CARDS    */
 
-   
+.container-nav{
+    display: flex;
+    flex-wrap: wrap;
+    
+
+}
+h2{
+
+   padding: 1.875rem;
+   font-size: x-large;
+   color:var(--second-text)
+
+}
+.cards{ 
+    margin: .625rem;
+    
+}
+
+.cards > .card{
+    width: calc((100% / 6) -1.25rem );
+    margin: .625rem 0px 0px 1.25rem;
+}   
+
+.container-nav img{
+    width:15.625rem;
+}
 /*    MAIN   */   
 
 #main{
     background-color: black;
     height: 100vh;
+    width: 15.625rem;
     position: fixed;
     top:0;
     left: 0;
-
+    
 }
 
 .main-top{
@@ -134,7 +161,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    
+
 }
 div.logo-sx{
     margin: 1.25rem;
@@ -202,20 +229,11 @@ span i{
     font-weight: bold;
 }
 
-div h5{
+.spotify-playlist{
     color:var(--third-text);
     margin: 1.5625rem;
 }
 
-
-/*    PLAYER STICKY   */
-
-#player-sticky{
-    background-color: var(--second-color);
-    height: 5rem;
-    position: sticky;
-    bottom: 0;
-}
 .container-main-bottom{
     display: flex;
     margin-top: 9.375rem;
@@ -230,6 +248,33 @@ div h5{
 
 .container-main-bottom div{
     margin-top: .625rem;
+}
+.cont-text{
+    text-align: center;
+    font-stretch: wider;
+}
+
+
+
+.cont-text > h4{
+
+    font-size: 1.25rem;
+
+}
+
+.cont-text > h5{
+    font-size: .9375rem;
+}
+
+
+/*    PLAYER STICKY   */
+
+#player-sticky{
+    background-color: var(--second-color);
+    height: 5rem;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
 }
 /* LESSONS SECTION */
 
