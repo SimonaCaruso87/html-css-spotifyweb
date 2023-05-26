@@ -129,7 +129,13 @@
     position: relative;
 }
 
+.barra-con-logo-sx{
 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
 div.logo-sx{
     margin: 1.25rem;
     font-size: .625rem;
