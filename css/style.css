@@ -1,40 +1,49 @@
 /*************************************************
+          RESET
+ *************************************************/
+
+ *{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*************************************************
     GENERAL STYLES
  *************************************************/
-*,
- *::before,
- *::after {
-     margin: 0;
-     padding: 0;
-     box-sizing: border-box;
- }
- 
- body {
-    font-family: 'Montserrat', sans-serif;
-     
- }
- 
- img {
-     max-width: 100%;
- }
+
+body{
+    font-family: 'Montserrat', sans-serif;     
+}
+
+.container{
+    width: 100%;
+    padding:.625rem;
+}
+
+img{
+    width: 100%;
+}
 
 /************************************************
      CUSTOM PROPERTIES
-  ************************************************/
+ ************************************************/
+
+:root{
  
  /* COLOR BACKGROUND*/
 
-  :root{
-
-    --first-color:#141922;
-    --second-color:#282828;
+    --first-background-color:#141922;
+    --second-background-color:#282828;
+    --third-background-color:#4A4E54;
+    --forth-background-color:#000000;
 
  /* COLOR TEXT */ 
+
     --first-text:#4A4E54;
     --second-text:white;
     --third-text:#6A6A6A;
-   }
-
+}
 
  /************************************************
      UTILITIES
@@ -42,242 +51,202 @@
  
  /* LAYOUT */
 
- .my-container{
+ /* .my-container{
     max-width: 1200px;
     margin: 0 auto;
- }
- 
+ } */
 
-/* TEXT */
- 
-
-/************************************************
+ /************************************************
      SITE SECTIONS
   ************************************************/
- 
- /* HEADER */
 
-   #header-sticky{
-    background-color: rgba(0,0,0,0.8);
-    text-align: end;
-    line-height:5rem;
-    position:sticky;
-    top:0;
-   }
+ /*  MAIN CONTENT  */
 
 
-   .contenuto button{
+     /* MAIN HEADER  */
+
+#main-content{
+    
+    height: calc(100vh - 6.25rem);
+    display:flex;
+    background-color: var(--first-background-color);
+ }
+
+#main-content > aside{
+    background-color: var(--forth-background-color);
+    width: 12.5rem;
+} 
+
+#main-content > main {
+
+    width: calc(100% - 12.5rem);
+    
+}
+
+#main-content > main > header{
+
+    position: fixed; 
+    top: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.7);
+    height: 5rem;
+    text-align: right;
+    width: calc(100% - 12.5rem);
+    
+}
+
+header > button{
     background-color: rgba(0,0,0,0.1);
     border-radius: 1.875rem;
-    border-color:white;
+    border-color: whitesmoke;
     color: var(--second-text);
     width: 14.00rem;
     height: 2.5rem;
     font-size: .625rem;
-   }
+    margin: 1.25rem;
+    transition: all 1s ease-in-out;
+}
 
-   #contenuto-con-lo-scroll-dx{
-        
-    height: 100vh;
-    background-color: var(--first-color);
-    text-decoration: none;
-    overflow-y: auto;
-    width: calc((100% - 15.625rem) - 0.3px);
-    margin-left: auto;
+button:hover{
 
-   }
+    transform:scale(1.1);
+}
 
-   .my-container .menu{
+  /*   MAIN SECTION  */
+
+  /*  NAV   */
+
+  .container .menu{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     list-style-type: none;
 }
 
-    .my-container a{
+.container a{
     text-decoration: none;
     padding: 0px 20px;
     color:var(--first-text);
     font-size: .625rem;
 }
 
-    .my-container a:hover{
-    text-decoration: underline;
-    transform: transition;
-    text-decoration-color: yellow;
-    text-size-adjust: .3125rem;
-}
-
-    .my-container a{
+.container a{
     transition: all .35s ease;
   }
 
-/*    HEADER NAV CARDS    */
 
-.container-nav{
+
+
+#main-content > main > section{
+
+    overflow-y: auto;
+    /* QUANDO AGGIUNGO OVERFLOW DEVO ANCHE 
+    DARE UN ALTEZZA FISSA,
+    ALTRIMENTI NON SCROLLA 
+    IN QUESTO CASO LA SECTION PRENDERà 
+    L'ALTEZZA DEL GENITORE
+    CHE è MAIN  */
+    height: 100%;
+    padding-top: 5rem;
+    
+}
+
+.underline::after{
+    text-decoration: underline;
+    margin:0 auto;
+    content:" ";
+    display: block;
+    background-color: #ADFF2F;
+    width: 1.5625rem;
+    height: .125rem;
+    text-align: center;
+}
+
+/*   SECTION MAIN 2 */
+
+.cards {
     display: flex;
     flex-wrap: wrap;
+    margin:0px -0.625rem;
+
+}
+
+.cards > .card {
+
+    width:calc((100% / 6) - 1.25rem);
+    margin:0 .625rem;
+
+}
+
+.container h2{
+    font-size: 1.25rem;
+    color:var(--second-text);
+    margin-bottom:10px;
+}
+
+.container h4{
+    font-size: medium;
+    color:var(--second-text);
+    text-align: center;
+
+}
+
+.container h5{
+    color:var(--first-text);
+    text-align: center;
+
+}
+
+.container h6{
+    color:var(--first-text);
+    font-size: small;
+    margin-bottom: .625rem;
     
 
 }
-h2{
 
-   padding: 1.875rem;
-   font-size: x-large;
-   color:var(--second-text)
-
-}
-.cards{ 
-    margin: .625rem;
-    
+.cover-container{
+      position: relative;
 }
 
-.cards > .card{
-    width: calc((100% / 6) -1.25rem );
-    margin: .625rem 0px 0px 1.25rem;
+.overlay{
+    position: absolute; 
+    top:4.375rem;
+    bottom: 4.375rem; 
+    width: 100%;
+    transition: 1s ease-in-out;
+    opacity:0;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+  }
+  
+  .card:hover .overlay{
+    opacity: 2;
+
 }   
 
-.container-nav img{
-    width:15.625rem;
+.container a:hover{
+    transform: transition;
+    color:white;
+    text-size-adjust: .3125rem;
 }
-/*    MAIN   */   
 
-#main{
-    background-color: black;
-    height: 100vh;
-    width: 15.625rem;
-    position: fixed;
-    top:0;
-    left: 0;
+
+ /*  FOOTER  */
+
+footer{
+    height: 6.25rem;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--second-background-color);
+}
+
+footer > * {
+    padding: 1.25rem;
+    color: white;
     
 }
-
-.main-top{
-    position: relative;
-}
-
-.barra-con-logo-sx{
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-}
-div.logo-sx{
-    margin: 1.25rem;
-    font-size: .625rem;
-}
-
-.logo-main-fontawesone{
-    color:var(--second-text);
-    padding: .625rem;
-}
-
-span i{
-    padding-right:10px;
-}
-
-.navbar-logo a{
-    text-decoration: none;
-    list-style-type: none;
-    color:var(--third-text);
-    margin: 1.25rem;
-
-}
-
-.navbar-logo i{
-    margin: .3125rem;
-    color:var(--third-text)
-}
-
-.navbar-logo span:not(.plus-button-text){
-    font-size: .75rem;
-    font-weight: bold;
-
-}
-
-.playlist{
-    font-size: .8125rem;
-    color: var(--second-text);
-    margin:1.25rem 0rem 1.5625rem 1.5625rem;
- }   
-
- .plus-button{
-    width: 1.875rem;
-    height: 1.875rem;
-    line-height: 1.875rem;
-    vertical-align: middle;
-    background-color:var(--third-text);
-    font-size: 1.875rem;
-    text-align: center;
- }
-.container-plus{
-    display: flex;
-
-}
- div.plus-button{
-    margin-left: 1.5625rem;
- }
-
- .plus-button-text{
-    color:var(--third-text);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: .625rem;
-    font-size: .9375rem;
-    font-weight: bold;
-}
-
-.spotify-playlist{
-    color:var(--third-text);
-    margin: 1.5625rem;
-}
-
-.container-main-bottom{
-    display: flex;
-    margin-top: 9.375rem;
-    margin-left: 1.5625rem;
-}
-
-.main-flexend{
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-}
-
-.container-main-bottom div{
-    margin-top: .625rem;
-}
-.cont-text{
-    text-align: center;
-    font-stretch: wider;
-}
-
-
-
-.cont-text > h4{
-
-    font-size: 1.25rem;
-
-}
-
-.cont-text > h5{
-    font-size: .9375rem;
-}
-
-
-/*    PLAYER STICKY   */
-
-#player-sticky{
-    background-color: var(--second-color);
-    height: 5rem;
-    position: sticky;
-    bottom: 0;
-    width: 100%;
-}
-/* LESSONS SECTION */
-
 
  /************************************************
      SOLUZIONE RESPONSIVE
@@ -289,35 +258,46 @@ Caso Base Desktop da 1100px in poi */
 
 /* Medium Device Tablet fino a 1100px */
 
-@media screen and (max-width: 1100px){
+@media screen and (max-width:1100px){
     
-
-
+    .cards > .card{
+        width:calc(100% / 4);
+    }
+    
 } 
-
+    
 /* Medium Device Mobile  fino a 700px*/
-
+    
 @media screen and (max-width:700px){
+     
+    .cards > .card{
+        width:calc(100% / 2);
+    }    
     
-
-
+    
 } 
-
+    
 /* Small Device Mobile  fino a 600px*/
-
-@media screen and (max-width:600px){
     
-
-
+@media screen and (max-width:600px){
+        
+    .aside{
+        width: 5rem;
+    }
+    
 } 
+    
+    
+    /*************************************************
+        DEBUG
+     *************************************************/
+    
+     .debug .cards{
+        border: 2px solid lightcoral;
+     }
 
+     .debug .card{
+        border: 2px solid greenyellow;
+     }
 
-
-/*************************************************
-    DEBUG
- *************************************************/
-
-.debug{
-     border: 5px dashed lightcoral;
-}
 
