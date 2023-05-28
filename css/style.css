@@ -41,7 +41,7 @@ img{
  /* COLOR TEXT */ 
 
     --first-text:#4A4E54;
-    --second-text:white;
+    --second-text:rgb(255, 255, 255);
     --third-text:#6A6A6A;
 }
 
@@ -236,16 +236,34 @@ button:hover{
  /*  FOOTER  */
 
 footer{
-    height: 6.25rem;
+    height:6.25rem ;
     display: flex;
     justify-content: space-between;
     background-color: var(--second-background-color);
 }
 
-footer > * {
-    padding: 1.25rem;
-    color: white;
-    
+footer img{
+    margin-left: 1.25rem;
+    margin-top: 1.25rem;
+}
+
+.cont-img-footer{
+    width: 20%;
+    display: flex;
+    justify-content:space-between;
+}
+
+.test-footer > h5{
+    color: var(--second-text);
+}
+
+.test-footer > h6{
+    color: var(--third-text);
+}
+
+.folder-love{
+    margin-top: 1.25rem; 
+    color: var(--third-text);
 }
 
  /************************************************
