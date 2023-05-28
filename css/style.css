@@ -183,7 +183,7 @@ span i{
     font-weight: bold;
 }
 
-div h5{
+section h5{
     color:var(--third-text);
     margin: 1.5625rem;
 }
@@ -314,17 +314,24 @@ footer{
     display: flex;
     justify-content: space-between;
     background-color: var(--second-background-color);
+    padding: 0.625rem;
+
 }
 
-footer img{
-    margin-left: 1.25rem;
-    margin-top: 1.25rem;
-}
-
-.cont-img-footer{
-    width: 20%;
+.cards-footer{
     display: flex;
     justify-content:space-between;
+    
+}
+
+.card-footer{
+    width: calc((100% / 3) - .625rem);
+    padding: .3125rem .3125rem;
+}
+
+.progress-bar{
+    width: 40%;
+    display: flex;
 }
 
 .test-footer > h5{
@@ -335,10 +342,11 @@ footer img{
     color: var(--third-text);
 }
 
-.folder-love{
+.card-footer i{
     margin-top: 1.25rem; 
     color: var(--third-text);
 }
+
 
  /************************************************
      SOLUZIONE RESPONSIVE
@@ -392,4 +400,12 @@ Caso Base Desktop da 1100px in poi */
         border: 2px solid greenyellow;
      }
 
+    .debug .cont-img-footer{
+        border: 2px dashed green;
+    }
+     
+    .debug > .cards-footer , .debug > .card-footer {
+        border: 2px dashed yellow;
+    }
+    
 
