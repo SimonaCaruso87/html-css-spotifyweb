@@ -114,6 +114,80 @@ button:hover{
 
   /*   MAIN SECTION  */
 
+  /*   ASIDE  */
+
+  div.logo-sx{
+    margin: 1.25rem;
+    font-size: .625rem;
+  }
+
+  .logo-main-fontawesone{
+    color:var(--second-text);
+    padding: .625rem;
+}
+
+span i{
+    padding-right:10px;
+}
+
+
+  .navbar-logo a{
+    text-decoration: none;
+    list-style-type: none;
+    color:var(--third-text);
+    margin: 1.25rem;
+
+}
+
+.navbar-logo i{
+    margin: .3125rem;
+    color:var(--third-text)
+}
+
+.navbar-logo span:not(.plus-button-text){
+    font-size: .75rem;
+    font-weight: bold;
+
+}
+
+.playlist{
+    font-size: .8125rem;
+    color: var(--second-text);
+    margin:1.25rem 0rem 1.5625rem 1.5625rem;
+ }   
+
+ .plus-button{
+    width: 1.875rem;
+    height: 1.875rem;
+    line-height: 1.875rem;
+    vertical-align: middle;
+    background-color:var(--third-text);
+    font-size: 1.875rem;
+    text-align: center;
+ }
+.container-plus{
+    display: flex;
+
+}
+ div.plus-button{
+    margin-left: 1.5625rem;
+ }
+
+ .plus-button-text{
+    color:var(--third-text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: .625rem;
+    font-size: .9375rem;
+    font-weight: bold;
+}
+
+div h5{
+    color:var(--third-text);
+    margin: 1.5625rem;
+}
+
   /*  NAV   */
 
   .container .menu{
