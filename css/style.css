@@ -183,9 +183,10 @@ span i{
     font-weight: bold;
 }
 
-section h5{
+.lista-playlist ul > li > a{
     color:var(--third-text);
     margin: 1.5625rem;
+    text-decoration: none;
 }
 
   /*  NAV   */
@@ -198,6 +199,7 @@ section h5{
 }
 
 .container a{
+    list-style-type: none;
     text-decoration: none;
     padding: 0px 20px;
     color:var(--first-text);
@@ -329,11 +331,15 @@ footer{
     padding: .3125rem .3125rem;
 }
 
-.progress-bar{
+.contenitore-progress-bar{
     width: 40%;
-    display: flex;
 }
 
+.progress-bar{
+    width: 31.25rem;
+    height: 1em;
+    background-color: var(--third-background-color);
+}
 .test-footer > h5{
     color: var(--second-text);
 }
