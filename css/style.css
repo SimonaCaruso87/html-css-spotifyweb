@@ -23,6 +23,7 @@ body{
 
 img{
     width: 100%;
+    display: block;
 }
 
 /************************************************
@@ -92,7 +93,8 @@ img{
     height: 5rem;
     text-align: right;
     width: calc(100% - 12.5rem);
-    
+    z-index:999;
+
 }
 
 header > button{
@@ -112,51 +114,68 @@ button:hover{
     transform:scale(1.1);
 }
 
-  /*   MAIN SECTION  */
+  /*   MAIN SECTION ASIDE */
 
-  /*   ASIDE  */
+  aside{
+    padding-left: 1.25rem;
+    padding-top: .625rem;
+    position: relative;
+    min-height: 25rem;
+    display: inline-block;
+    overflow: hidden;
+    height: 100vh;
+}
 
-  div.logo-sx{
-    margin: 1.25rem;
-    font-size: .625rem;
-  }
+aside ul > li > a{
+    color: var(--third-text);
+}
+
+  /* LOGO SX */
+
 
   .logo-main-fontawesone{
     color:var(--second-text);
-    padding: .625rem;
+    margin-right: .3125rem;
 }
 
-span i{
-    padding-right:10px;
+/*  NAVBAR LOGO  */
+
+.menu-main li i{
+    padding:.625rem 0;
 }
 
-
-  .navbar-logo a{
+.navbar-logo a{
     text-decoration: none;
     list-style-type: none;
     color:var(--third-text);
-    margin: 1.25rem;
-
 }
 
-.navbar-logo i{
-    margin: .3125rem;
-    color:var(--third-text)
+.navbar-logo a:hover,
+.navbar-logo span:hover {
+    color:white;
+}
+
+.navbar-logo > i{
+    color:var(--third-text);
 }
 
 .navbar-logo span:not(.plus-button-text){
     font-size: .75rem;
     font-weight: bold;
+    margin-left: .3125rem;
 
 }
+/* PLAYLIST */
 
 .playlist{
     font-size: .8125rem;
     color: var(--second-text);
-    margin:1.25rem 0rem 1.5625rem 1.5625rem;
+    padding:10px 0;
  }   
 
- .plus-button{
+/* CONTAINER PLUS CREA PLAYLIST*/
+
+.plus-button{
     width: 1.875rem;
     height: 1.875rem;
     line-height: 1.875rem;
@@ -164,32 +183,70 @@ span i{
     background-color:var(--third-text);
     font-size: 1.875rem;
     text-align: center;
- }
+}
+
+
 .container-plus{
     display: flex;
-
+    padding:.625rem 0;
 }
- div.plus-button{
-    margin-left: 1.5625rem;
- }
 
  .plus-button-text{
     color:var(--third-text);
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: .625rem;
     font-size: .9375rem;
-    font-weight: bold;
+    color:var(--third-text);
+    padding-left: .625rem;
 }
 
-.lista-playlist ul > li > a{
-    color:var(--third-text);
-    margin: 1.5625rem;
+.plus-button-text a{
     text-decoration: none;
 }
 
-  /*  NAV   */
+/*  NAV NOME PLAYLIST */
+
+.name-playlist{
+    overflow-y: auto;
+    height:50vh;
+}
+.name-playlist a{
+    text-decoration: none;
+}
+
+.name-playlist ul > li{
+    padding-top: .625rem;
+}
+
+.name-playlist a:hover{
+    color:white
+}
+
+/* CONTAINER MAIN BUTTOM*/
+
+.container-main-bottom{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width:100%;
+    padding-left: 1.25rem;
+}
+
+.container-main-bottom i{
+    color: var(--third-text);
+    padding-top: .3125rem;
+}
+
+.main-flexend{
+    display: flex;
+    color: var(--third-text);
+}
+
+
+
+
+  /*  NAV MAIN*/
 
   .container .menu{
     display: flex;
@@ -199,7 +256,6 @@ span i{
 }
 
 .container a{
-    list-style-type: none;
     text-decoration: none;
     padding: 0px 20px;
     color:var(--first-text);
@@ -209,9 +265,6 @@ span i{
 .container a{
     transition: all .35s ease;
   }
-
-
-
 
 #main-content > main > section{
 
@@ -254,6 +307,10 @@ span i{
 
 }
 
+.song-img{
+    position: relative;
+}
+
 .container h2{
     font-size: 1.25rem;
     color:var(--second-text);
@@ -287,14 +344,18 @@ span i{
 
 .overlay{
     position: absolute; 
-    top:4.375rem;
-    bottom: 4.375rem; 
+    top:0;
+    bottom:0; 
     width: 100%;
-    transition: 1s ease-in-out;
+    transition: 0.3s ease-in-out;
     opacity:0;
     color: white;
     font-size: 20px;
     text-align: center;
+    background-color: rgba(0,0,0,0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   .card:hover .overlay{
@@ -317,13 +378,13 @@ footer{
     justify-content: space-between;
     background-color: var(--second-background-color);
     padding: 0.625rem;
-
+    position: relative;
 }
 
 .cards-footer{
     display: flex;
-    justify-content:space-between;
-    
+    justify-content: center;
+    align-items: center;
 }
 
 .card-footer{
@@ -332,14 +393,41 @@ footer{
 }
 
 .contenitore-progress-bar{
-    width: 40%;
+    position:relative;
+}
+
+.barra-play{
+    display: flex;
+    justify-content: space-between;
+}
+
+.barra-play span{
+    margin: .3125rem;
+}
+.fontawesome-footer > a{
+ text-decoration: none;
+ list-style-type: none;
 }
 
 .progress-bar{
     width: 31.25rem;
-    height: 1em;
+    height: 0.4em;
     background-color: var(--third-background-color);
 }
+
+.avanzamento{
+	width:20%;
+    height:0.4em;
+    background-color:white;
+    transition:all 2s linear;
+}
+
+.progress-bar:hover .avanzamento{
+	width:100%;
+    background-color:#ADFF2F;
+    transition: all 1s linear;
+}
+
 .test-footer > h5{
     color: var(--second-text);
 }
@@ -352,6 +440,55 @@ footer{
     margin-top: 1.25rem; 
     color: var(--third-text);
 }
+
+.fontawesome-footer{
+    color: var(--second-text);
+    display: flex;
+    justify-content:center;
+    padding: .625rem;
+}
+
+.fontawesome-footer > i{
+    padding: 0 .9375rem;
+}
+
+.barra-play span{
+    color: white;
+    font-size: x-small;
+}
+
+/* VOLUME FOOTER */
+
+.volume-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.volume-footer i{
+    padding: 0 .3125rem;
+}
+
+.progress-bar-vol{
+    width: 9.375rem;
+    height: 0.2rem;
+    background-color: var(--third-background-color);
+}
+
+.avanzamento-volume-footer{
+	width:20%;
+    height:0.2em;
+    background-color:white;
+    transition:all 2s linear;
+}
+
+.progress-bar-vol:hover .avanzamento-volume-footer{
+	width:100%;
+    background-color:#ADFF2F;
+    transition: all 1s linear;
+}
+
 
 
  /************************************************
@@ -380,7 +517,7 @@ Caso Base Desktop da 1100px in poi */
         width:calc(100% / 2);
     }    
     
-    
+
 } 
     
 /* Small Device Mobile  fino a 600px*/
@@ -398,20 +535,33 @@ Caso Base Desktop da 1100px in poi */
         DEBUG
      *************************************************/
     
-     .debug .cards{
+     /* .debug .cards-footer{
         border: 2px solid lightcoral;
      }
 
-     .debug .card{
+     .debug .card-footer{
         border: 2px solid greenyellow;
      }
-
-    .debug .cont-img-footer{
-        border: 2px dashed green;
-    }
-     
-    .debug > .cards-footer , .debug > .card-footer {
-        border: 2px dashed yellow;
-    }
     
+     .debug .contenitore-progress-bar{
+        border: 2px solid lightcoral;
+    } 
+    .debug .fontawesome-footer i{
+        border: 2px solid greenyellow;
+    } 
 
+    .debug .progress-bar{
+        border: 2px solid lightcoral;
+    } 
+
+    .debug .barra-play{
+        border: 2px solid greenyellow;
+    }
+
+    .debug .volume-footer{
+        border: 2px solid lightcoral;
+    } 
+
+    .debug .volume-footer > *{
+        border: 2px solid greenyellow;
+    } */
