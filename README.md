@@ -1,4 +1,4 @@
-![preview](./.github/preview.png) 
+![preview](./github/preview.png) 
 
 ##Boolflix
 
