@@ -10,4 +10,3 @@
     - Mobile normale: fino a 700px
     - Tablet: fino a 1100px
     - Desktop: fino all'infinito
-    - Buon Lavoro! (modificato) 
